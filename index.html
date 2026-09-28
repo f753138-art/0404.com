@@ -1,0 +1,3254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>04:04 Cloud Kitchen | Moodbidri</title>
+
+<meta
+    name="description"
+    content="04:04 Cloud Kitchen, Moodbidri. Burgers, wraps, momos, fries, starters, rice & noodles, braosted chicken and mojitos. Open daily 4 PM – 4 AM. Call / WhatsApp +91 7619198743."
+>
+
+<link
+    href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+>
+
+<style>
+
+/* =========================================================
+   ROOT
+========================================================= */
+
+:root{
+    --bg:#080808;
+    --s2:#111111;
+    --card:#171717;
+    --gold:#F28C28;
+    --gold2:#FFAE55;
+    --tx:#ffffff;
+    --mut:#AFAFAF;
+    --line:#2a2a2a;
+
+    --display:'Anton', Impact, 'Arial Narrow', sans-serif;
+    --body:'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+
+    box-sizing:border-box;
+}
+
+*,
+*::before,
+*::after{
+    box-sizing:inherit;
+}
+
+html{
+    scroll-behavior:smooth;
+    scroll-padding-top:80px;
+}
+
+body{
+    margin:0;
+    background:var(--bg);
+    color:var(--tx);
+    font-family:var(--body);
+    line-height:1.6;
+    overflow-x:hidden;
+}
+
+body.no-scroll{
+    overflow:hidden;
+}
+
+a{
+    color:inherit;
+    text-decoration:none;
+}
+
+button,
+input,
+textarea{
+    font-family:inherit;
+}
+
+h1,
+h2,
+h3,
+h4{
+    margin:0;
+    font-family:var(--display);
+    font-weight:400;
+    line-height:1.05;
+    letter-spacing:.01em;
+    text-transform:uppercase;
+}
+
+.w{
+    width:min(1150px, calc(100% - 40px));
+    margin:0 auto;
+}
+
+section{
+    padding:72px 0;
+}
+
+.g{
+    color:var(--gold);
+}
+
+/* =========================================================
+   BUTTONS
+========================================================= */
+
+.btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+
+    min-height:48px;
+    padding:0 26px;
+
+    border-radius:999px;
+    border:2px solid transparent;
+
+    font-size:.85rem;
+    font-weight:800;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+
+    cursor:pointer;
+    transition:.2s ease;
+}
+
+.btn:hover{
+    transform:translateY(-3px);
+}
+
+.btn:disabled{
+    cursor:not-allowed;
+    transform:none;
+}
+
+.pri{
+    background:linear-gradient(
+        135deg,
+        var(--gold2),
+        var(--gold)
+    );
+
+    color:#111;
+
+    box-shadow:
+        0 8px 30px rgba(242,140,40,.35);
+}
+
+.sec{
+    border-color:var(--gold);
+    color:var(--gold);
+    background:transparent;
+}
+
+.sec:hover{
+    background:rgba(242,140,40,.12);
+}
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+header{
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+
+    z-index:50;
+
+    background:rgba(8,8,8,.88);
+
+    backdrop-filter:blur(14px);
+    -webkit-backdrop-filter:blur(14px);
+
+    border-bottom:1px solid var(--line);
+}
+
+.nav{
+    min-height:64px;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    gap:12px;
+}
+
+.logo{
+    font-size:1.45rem;
+    letter-spacing:.04em;
+}
+
+.logo small{
+    display:block;
+
+    color:var(--mut);
+
+    font-family:var(--body);
+    font-size:.58rem;
+    font-weight:700;
+
+    letter-spacing:.22em;
+    line-height:1;
+}
+
+.links{
+    display:none;
+    gap:26px;
+
+    color:var(--mut);
+    font-weight:600;
+}
+
+.links a{
+    transition:.2s;
+}
+
+.links a:hover{
+    color:var(--gold);
+}
+
+.nr{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.nr .btn{
+    min-height:40px;
+    padding:0 18px;
+    font-size:.75rem;
+}
+
+/* =========================================================
+   CART BUTTON
+========================================================= */
+
+.cartbtn{
+    position:relative;
+
+    width:44px;
+    height:44px;
+
+    border:1px solid var(--line);
+    border-radius:14px;
+
+    background:var(--card);
+    color:#fff;
+
+    font-size:1.1rem;
+
+    cursor:pointer;
+
+    transition:.2s;
+}
+
+.cartbtn:hover{
+    border-color:var(--gold);
+}
+
+.cnt{
+    position:absolute;
+
+    top:-6px;
+    right:-6px;
+
+    min-width:20px;
+    height:20px;
+
+    display:grid;
+    place-items:center;
+
+    border-radius:10px;
+
+    background:var(--gold);
+    color:#111;
+
+    font-size:.7rem;
+    font-weight:800;
+}
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero{
+    min-height:100vh;
+
+    display:flex;
+    align-items:center;
+
+    padding-top:140px;
+
+    background:
+        radial-gradient(
+            700px 500px at 80% 40%,
+            rgba(242,140,40,.16),
+            transparent 70%
+        ),
+        var(--bg);
+}
+
+.hero-content{
+    max-width:850px;
+}
+
+.tag{
+    display:inline-block;
+
+    margin-bottom:20px;
+    padding:7px 16px;
+
+    border:1px solid var(--gold);
+    border-radius:999px;
+
+    color:var(--gold);
+
+    font-size:.75rem;
+    font-weight:800;
+    letter-spacing:.14em;
+}
+
+.hero h1{
+    font-size:clamp(3rem,10vw,6rem);
+}
+
+.hero-text{
+    max-width:700px;
+    margin:20px 0 0;
+
+    color:var(--mut);
+    font-size:1.1rem;
+}
+
+.brand{
+    margin:22px 0 4px;
+
+    font-size:1.3rem;
+    letter-spacing:.14em;
+}
+
+.open{
+    color:var(--gold);
+
+    font-size:.85rem;
+    font-weight:800;
+
+    letter-spacing:.1em;
+}
+
+.cta{
+    display:flex;
+    flex-wrap:wrap;
+    gap:12px;
+
+    margin-top:28px;
+}
+
+/* =========================================================
+   SECTION HEADINGS
+========================================================= */
+
+.alt{
+    background:var(--s2);
+}
+
+.sh{
+    margin-bottom:28px;
+}
+
+.sh h2{
+    font-size:clamp(2rem,6vw,3.2rem);
+}
+
+.sh p{
+    margin:8px 0 0;
+    color:var(--mut);
+}
+
+/* =========================================================
+   MENU TOOLS
+========================================================= */
+
+.tools{
+    position:sticky;
+
+    top:64px;
+
+    z-index:20;
+
+    margin-bottom:22px;
+    padding:12px 0;
+
+    background:rgba(17,17,17,.95);
+
+    backdrop-filter:blur(10px);
+    -webkit-backdrop-filter:blur(10px);
+}
+
+.search{
+    width:100%;
+    height:48px;
+
+    margin-bottom:12px;
+
+    padding:0 16px;
+
+    border:1px solid var(--line);
+    border-radius:14px;
+
+    outline:none;
+
+    background:var(--card);
+    color:#fff;
+
+    font-size:1rem;
+}
+
+.search:focus{
+    border-color:var(--gold);
+}
+
+.search::placeholder{
+    color:#777;
+}
+
+.tabs{
+    display:flex;
+    gap:8px;
+
+    overflow-x:auto;
+
+    padding-bottom:2px;
+
+    scrollbar-width:none;
+}
+
+.tabs::-webkit-scrollbar{
+    display:none;
+}
+
+.tab{
+    flex:none;
+
+    height:40px;
+    padding:0 18px;
+
+    border:1px solid var(--line);
+    border-radius:999px;
+
+    background:var(--card);
+    color:var(--mut);
+
+    font-size:.78rem;
+    font-weight:800;
+
+    letter-spacing:.06em;
+    text-transform:uppercase;
+
+    cursor:pointer;
+
+    transition:.2s;
+}
+
+.tab.on{
+    background:var(--gold);
+    color:#111;
+    border-color:var(--gold);
+}
+
+/* =========================================================
+   MENU GRID
+========================================================= */
+
+.grid{
+    display:grid;
+    grid-template-columns:
+        repeat(
+            auto-fill,
+            minmax(250px,1fr)
+        );
+
+    gap:16px;
+}
+
+.card{
+    background:var(--card);
+
+    border:1px solid var(--line);
+    border-radius:20px;
+
+    overflow:hidden;
+
+    transition:.25s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+
+    border-color:
+        rgba(242,140,40,.55);
+
+    box-shadow:
+        0 16px 40px rgba(0,0,0,.6);
+}
+
+.cb{
+    min-height:180px;
+
+    display:flex;
+    flex-direction:column;
+
+    gap:7px;
+
+    padding:20px;
+}
+
+.cb h3{
+    font-size:1.3rem;
+}
+
+.cb p{
+    flex:1;
+
+    margin:0;
+
+    color:var(--mut);
+
+    font-size:.85rem;
+}
+
+.row{
+    display:flex;
+
+    align-items:center;
+    justify-content:space-between;
+
+    gap:10px;
+
+    margin-top:10px;
+}
+
+.pr{
+    color:var(--gold);
+
+    font-size:1.15rem;
+    font-weight:800;
+}
+
+.add{
+    height:40px;
+
+    padding:0 18px;
+
+    border:0;
+    border-radius:999px;
+
+    background:var(--gold);
+    color:#111;
+
+    font-size:.8rem;
+    font-weight:800;
+
+    cursor:pointer;
+
+    transition:.2s;
+}
+
+.add:hover{
+    transform:scale(1.05);
+}
+
+.qty{
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:4px;
+
+    border:1px solid var(--gold);
+    border-radius:999px;
+
+    background:#0d0d0d;
+}
+
+.qty button{
+    width:36px;
+    height:36px;
+
+    border:0;
+    background:none;
+
+    color:var(--gold);
+
+    font-size:1.2rem;
+    font-weight:800;
+
+    cursor:pointer;
+}
+
+.qty b{
+    min-width:20px;
+    text-align:center;
+}
+
+.empty{
+    padding:40px 0;
+
+    color:var(--mut);
+
+    text-align:center;
+}
+
+/* =========================================================
+   ABOUT
+========================================================= */
+
+.two{
+    display:grid;
+    gap:30px;
+}
+
+.about p{
+    max-width:560px;
+
+    color:var(--mut);
+
+    font-size:1.05rem;
+}
+
+.chips{
+    display:flex;
+    flex-wrap:wrap;
+
+    gap:10px;
+
+    margin-top:20px;
+}
+
+.chips span{
+    padding:8px 16px;
+
+    border:1px solid var(--line);
+    border-radius:999px;
+
+    background:var(--card);
+
+    font-size:.85rem;
+}
+
+/* =========================================================
+   DELIVERY BOX
+========================================================= */
+
+.deliv{
+    padding:56px 22px;
+
+    border:1px solid rgba(242,140,40,.3);
+    border-radius:28px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(242,140,40,.16),
+            rgba(23,23,23,.9)
+        );
+
+    text-align:center;
+}
+
+.deliv h2{
+    font-size:clamp(2rem,7vw,3.8rem);
+}
+
+.deliv p{
+    color:var(--mut);
+}
+
+.call{
+    margin:22px 0 6px;
+
+    color:var(--gold);
+
+    font-size:.75rem;
+    font-weight:800;
+
+    letter-spacing:.2em;
+}
+
+.num{
+    display:block;
+
+    margin-bottom:22px;
+
+    font-size:clamp(1.8rem,7vw,2.8rem);
+}
+
+.rate-box{
+    max-width:400px;
+
+    margin:24px auto;
+
+    padding:15px 20px;
+
+    border:1px solid var(--gold);
+    border-radius:14px;
+
+    color:var(--gold);
+
+    font-size:1rem;
+    font-weight:800;
+}
+
+/* =========================================================
+   CONTACT
+========================================================= */
+
+.contact-text{
+    color:var(--mut);
+}
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer{
+    padding:48px 0;
+
+    background:#050505;
+
+    border-top:1px solid var(--line);
+
+    color:var(--mut);
+}
+
+.fg{
+    display:grid;
+    gap:28px;
+}
+
+footer h4{
+    margin-bottom:10px;
+
+    color:#fff;
+
+    font-size:1rem;
+}
+
+footer a{
+    display:block;
+    padding:3px 0;
+}
+
+footer a:hover{
+    color:var(--gold);
+}
+
+.soc{
+    display:flex;
+    gap:10px;
+}
+
+.social-btn{
+    width:46px;
+    height:46px;
+
+    display:grid;
+    place-items:center;
+
+    border:1px solid var(--line);
+    border-radius:50%;
+
+    background:var(--card);
+
+    font-size:.65rem;
+    font-weight:800;
+}
+
+.social-btn:hover{
+    background:var(--gold);
+    color:#111;
+}
+
+/* =========================================================
+   OVERLAY
+========================================================= */
+
+.ov{
+    position:fixed;
+    inset:0;
+
+    z-index:80;
+
+    background:rgba(0,0,0,.7);
+
+    opacity:0;
+    pointer-events:none;
+
+    transition:.3s;
+}
+
+.ov.on{
+    opacity:1;
+    pointer-events:auto;
+}
+
+/* =========================================================
+   CART DRAWER
+========================================================= */
+
+.drawer{
+    position:fixed;
+
+    top:0;
+    right:0;
+    bottom:0;
+
+    z-index:90;
+
+    width:min(440px,100%);
+
+    display:flex;
+    flex-direction:column;
+
+    background:#101010;
+
+    border-left:1px solid var(--line);
+
+    transform:translateX(100%);
+
+    transition:.35s ease;
+}
+
+.drawer.on{
+    transform:none;
+}
+
+.dh{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    padding:18px 20px;
+
+    border-bottom:1px solid var(--line);
+}
+
+.dh h3{
+    font-size:1.6rem;
+}
+
+.x{
+    width:40px;
+    height:40px;
+
+    border:0;
+    border-radius:12px;
+
+    background:var(--card);
+    color:#fff;
+
+    cursor:pointer;
+}
+
+.db{
+    flex:1;
+
+    overflow-y:auto;
+
+    padding:16px 20px;
+}
+
+/* =========================================================
+   CART ITEMS
+========================================================= */
+
+.ci{
+    display:flex;
+
+    align-items:center;
+    justify-content:space-between;
+
+    gap:12px;
+
+    padding:12px 0;
+
+    border-bottom:1px solid var(--line);
+}
+
+.ci-main{
+    flex:1;
+
+    font-weight:600;
+}
+
+.ci-main small{
+    display:block;
+
+    color:var(--mut);
+
+    font-weight:400;
+}
+
+/* =========================================================
+   DELIVERY FORM
+========================================================= */
+
+.f label{
+    display:block;
+
+    margin:12px 0 4px;
+
+    color:var(--mut);
+
+    font-size:.8rem;
+    font-weight:600;
+}
+
+.f input,
+.f textarea{
+    width:100%;
+
+    padding:12px;
+
+    border:1px solid var(--line);
+    border-radius:12px;
+
+    outline:none;
+
+    background:var(--card);
+    color:#fff;
+
+    font-size:1rem;
+
+    resize:vertical;
+}
+
+.f input:focus,
+.f textarea:focus{
+    border-color:var(--gold);
+}
+
+.f .btn{
+    width:100%;
+
+    margin-top:10px;
+}
+
+.err{
+    min-height:20px;
+
+    color:#ff7a7a;
+
+    font-size:.8rem;
+}
+
+.note{
+    margin:8px 0 12px;
+
+    color:var(--mut);
+
+    font-size:.78rem;
+}
+
+/* =========================================================
+   LOCATION STATUS
+========================================================= */
+
+.location-result{
+    margin-top:10px;
+    padding:12px;
+
+    border:1px solid var(--line);
+    border-radius:12px;
+
+    background:#0d0d0d;
+
+    font-size:.82rem;
+}
+
+.location-result strong{
+    color:var(--gold);
+}
+
+/* =========================================================
+   CART FOOTER
+========================================================= */
+
+.df{
+    padding:16px 20px;
+
+    background:var(--card);
+
+    border-top:1px solid var(--line);
+}
+
+.tr{
+    display:flex;
+
+    justify-content:space-between;
+
+    gap:15px;
+
+    padding:3px 0;
+
+    color:var(--mut);
+}
+
+.tr small{
+    display:block;
+
+    margin-top:2px;
+
+    color:#777;
+
+    font-size:.7rem;
+}
+
+.tr.t{
+    margin-top:7px;
+
+    color:#fff;
+
+    font-size:1.15rem;
+    font-weight:800;
+}
+
+.delivery-highlight{
+    color:var(--gold);
+    font-weight:800;
+}
+
+/* =========================================================
+   MOBILE CART BAR
+========================================================= */
+
+.bar{
+    position:fixed;
+
+    left:12px;
+    right:12px;
+    bottom:12px;
+
+    z-index:60;
+
+    display:none;
+
+    align-items:center;
+    justify-content:space-between;
+
+    gap:15px;
+
+    padding:14px 20px;
+
+    border:0;
+    border-radius:18px;
+
+    background:var(--gold);
+    color:#111;
+
+    box-shadow:
+        0 10px 40px rgba(0,0,0,.7);
+
+    font-size:1rem;
+    font-weight:800;
+
+    cursor:pointer;
+}
+
+.bar.on{
+    display:flex;
+}
+
+/* =========================================================
+   LOADER
+========================================================= */
+
+#ld{
+    position:fixed;
+    inset:0;
+
+    z-index:200;
+
+    display:grid;
+    place-items:center;
+
+    background:var(--bg);
+
+    transition:
+        opacity .5s,
+        visibility .5s;
+}
+
+#ld.h{
+    opacity:0;
+    visibility:hidden;
+}
+
+#ld span{
+    color:var(--gold);
+
+    font-size:3rem;
+
+    letter-spacing:.1em;
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media(min-width:760px){
+
+    .links{
+        display:flex;
+    }
+
+    .two{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .fg{
+        grid-template-columns:
+            2fr 1fr 1fr;
+    }
+
+    .bar{
+        display:none !important;
+    }
+}
+
+@media(max-width:759px){
+
+    .nr .btn{
+        display:none;
+    }
+
+    .hero{
+        min-height:auto;
+        padding-top:130px;
+        padding-bottom:90px;
+    }
+
+    .hero h1{
+        font-size:clamp(2.8rem,14vw,4.5rem);
+    }
+
+    .grid{
+        grid-template-columns:1fr;
+    }
+}
+
+@media(prefers-reduced-motion:reduce){
+
+    *{
+        transition:none !important;
+    }
+}
+
+</style>
+</head>
+
+
+<body>
+
+<!-- ======================================================
+     LOADER
+====================================================== -->
+
+<div id="ld">
+    <span>04:04</span>
+</div>
+
+
+<!-- ======================================================
+     HEADER
+====================================================== -->
+
+<header>
+
+    <div class="w nav">
+
+        <a href="#home" class="logo">
+            04:04 <span class="g">Cloud Kitchen</span>
+            <small>MOODBIDRI</small>
+        </a>
+
+        <nav class="links">
+
+            <a href="#home">Home</a>
+            <a href="#menu">Menu</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+
+        </nav>
+
+        <div class="nr">
+
+            <a href="#menu" class="btn pri">
+                Order Now
+            </a>
+
+            <button
+                class="cartbtn"
+                id="cartOpen"
+                aria-label="Open cart"
+            >
+                🛒
+                <span class="cnt" id="cnt">0</span>
+            </button>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+<!-- ======================================================
+     MAIN
+====================================================== -->
+
+<main>
+
+
+<!-- ======================================================
+     HERO
+====================================================== -->
+
+<section class="hero" id="home">
+
+    <div class="w hero-content">
+
+        <span class="tag">
+            OPEN DAILY 4:00 PM – 4:00 AM
+        </span>
+
+        <h1>
+            Cravings don't have a
+            <span class="g">curfew.</span>
+        </h1>
+
+        <p class="hero-text">
+            Hot. Fresh. Loaded. Delivered to your doorstep.
+        </p>
+
+        <div class="brand">
+            04:04 CLOUD KITCHEN<br>
+            MOODBIDRI
+        </div>
+
+        <div class="open">
+            OPEN DAILY 4:00 PM – 4:00 AM
+        </div>
+
+        <div class="cta">
+
+            <a href="#menu" class="btn pri">
+                Order Now
+            </a>
+
+            <a href="#menu" class="btn sec">
+                View Menu
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ======================================================
+     MENU
+====================================================== -->
+
+<section class="alt" id="menu">
+
+    <div class="w">
+
+        <div class="sh">
+
+            <h2>
+                The <span class="g">Menu</span>
+            </h2>
+
+            <p>
+                Pick your cravings. Add to cart. We'll handle the rest.
+            </p>
+
+        </div>
+
+
+        <div class="tools">
+
+            <input
+                class="search"
+                id="q"
+                type="search"
+                placeholder="Search the menu..."
+                aria-label="Search menu"
+            >
+
+            <div
+                class="tabs"
+                id="tabs"
+                role="tablist"
+            ></div>
+
+        </div>
+
+
+        <div
+            class="grid"
+            id="grid"
+        ></div>
+
+
+        <p
+            class="empty"
+            id="none"
+            hidden
+        >
+            No items match your search.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- ======================================================
+     ABOUT
+====================================================== -->
+
+<section
+    class="about"
+    id="about"
+>
+
+    <div class="w two">
+
+        <div>
+
+            <div class="sh">
+
+                <h2>
+                    Why <span class="g">04:04?</span>
+                </h2>
+
+            </div>
+
+            <p>
+                Your cravings don't follow a clock.
+                That's why we're open late.
+            </p>
+
+            <p>
+                04:04 Cloud Kitchen serves delicious burgers,
+                wraps, momos, fries, starters, rice & noodles,
+                braosted chicken and refreshing mojitos.
+            </p>
+
+            <div class="chips">
+
+                <span>Burgers</span>
+                <span>Wraps</span>
+                <span>Momos</span>
+                <span>Fries</span>
+                <span>Braosted</span>
+                <span>Mojitos</span>
+
+            </div>
+
+        </div>
+
+
+        <div class="deliv">
+
+            <h2>
+                Open
+                <span class="g">4 PM – 4 AM</span>
+            </h2>
+
+            <p>
+                Every single day.
+                Late-night hunger, sorted.
+            </p>
+
+            <div class="rate-box">
+                🚚 DELIVERY ₹7 / KM
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ======================================================
+     DELIVERY
+====================================================== -->
+
+<section class="alt">
+
+    <div class="w">
+
+        <div class="deliv">
+
+            <h2>
+                Your cravings.<br>
+                <span class="g">Our delivery.</span>
+            </h2>
+
+            <p>
+                Share your current location and your
+                delivery charge will be calculated automatically.
+            </p>
+
+            <div class="rate-box">
+                ₹7 per 1 KM
+            </div>
+
+            <div class="call">
+                CALL / WHATSAPP
+            </div>
+
+            <a
+                class="num"
+                href="tel:+917619198743"
+            >
+                +91 7619198743
+            </a>
+
+            <a
+                href="#menu"
+                class="btn pri"
+            >
+                Order Now
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ======================================================
+     CONTACT
+====================================================== -->
+
+<section id="contact">
+
+    <div class="w">
+
+        <div class="sh">
+
+            <h2>
+                Find <span class="g">Us</span>
+            </h2>
+
+            <p>
+                Moodbidri, Karnataka
+            </p>
+
+        </div>
+
+        <p class="contact-text">
+            Delivering across Moodbidri and nearby areas,
+            4:00 PM – 4:00 AM daily.
+        </p>
+
+    </div>
+
+</section>
+
+
+</main>
+
+
+<!-- ======================================================
+     FOOTER
+====================================================== -->
+
+<footer>
+
+    <div class="w fg">
+
+        <div>
+
+            <h4>
+                04:04 CLOUD KITCHEN
+            </h4>
+
+            Moodbidri, Karnataka<br>
+
+            Open Daily:
+            4:00 PM – 4:00 AM
+
+            <br><br>
+
+            Call / WhatsApp:<br>
+
+            <a
+                href="tel:+917619198743"
+                style="color:#fff;font-weight:800"
+            >
+                +91 7619198743
+            </a>
+
+        </div>
+
+
+        <div>
+
+            <h4>
+                Quick Links
+            </h4>
+
+            <a href="#home">Home</a>
+            <a href="#menu">Menu</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+
+        </div>
+
+
+        <div>
+
+            <h4>
+                Follow
+            </h4>
+
+            <div class="soc">
+
+                <a
+                    class="social-btn"
+                    href="https://www.instagram.com/"
+                    target="_blank"
+                    rel="noopener"
+                    aria-label="Instagram"
+                >
+                    INSTAGRAM
+                </a>
+
+                <a
+                    class="social-btn"
+                    href="https://wa.me/917619198743"
+                    target="_blank"
+                    rel="noopener"
+                    aria-label="WhatsApp"
+                >
+                    WHATSAPP
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div
+        class="w"
+        style="margin-top:32px;font-size:.8rem"
+    >
+        © 2026 04:04 Cloud Kitchen, Moodbidri.
+        All rights reserved.
+    </div>
+
+</footer>
+
+
+<!-- ======================================================
+     MOBILE CART BAR
+====================================================== -->
+
+<button
+    class="bar"
+    id="bar"
+>
+
+    <span id="barN">
+        0 items
+    </span>
+
+    <span>
+        View Cart ·
+        <span id="barT">
+            ₹0
+        </span>
+    </span>
+
+</button>
+
+
+<!-- ======================================================
+     OVERLAY
+====================================================== -->
+
+<div
+    class="ov"
+    id="ov"
+></div>
+
+
+<!-- ======================================================
+     CART DRAWER
+====================================================== -->
+
+<aside
+    class="drawer"
+    id="dr"
+    aria-label="Shopping cart"
+    aria-hidden="true"
+>
+
+    <!-- CART HEADER -->
+
+    <div class="dh">
+
+        <h3 id="dt">
+            Your Cart
+        </h3>
+
+        <button
+            class="x"
+            id="cx"
+            aria-label="Close cart"
+        >
+            ✕
+        </button>
+
+    </div>
+
+
+    <!-- CART VIEW -->
+
+    <div
+        class="db"
+        id="cartV"
+    >
+
+        <div id="items"></div>
+
+    </div>
+
+
+    <!-- DELIVERY FORM -->
+
+    <div
+        class="db f"
+        id="formV"
+        hidden
+    >
+
+        <label for="fn">
+            Name *
+        </label>
+
+        <input
+            id="fn"
+            autocomplete="name"
+            placeholder="Enter your name"
+        >
+
+
+        <label for="fp">
+            Phone number *
+        </label>
+
+        <input
+            id="fp"
+            type="tel"
+            inputmode="tel"
+            autocomplete="tel"
+            placeholder="Enter phone number"
+        >
+
+
+        <label for="fa">
+            Delivery address *
+        </label>
+
+        <textarea
+            id="fa"
+            rows="2"
+            autocomplete="street-address"
+            placeholder="Enter delivery address"
+        ></textarea>
+
+
+        <label for="ff">
+            Flat / Door No.
+        </label>
+
+        <input
+            id="ff"
+            placeholder="Flat / Door number"
+        >
+
+
+        <label for="fl">
+            Landmark
+        </label>
+
+        <input
+            id="fl"
+            placeholder="Nearby landmark"
+        >
+
+
+        <button
+            class="btn sec"
+            type="button"
+            id="loc"
+        >
+            📍 Use Current Location
+        </button>
+
+
+        <div
+            class="note"
+            id="locN"
+        >
+            Location is required for automatic delivery-charge calculation.
+        </div>
+
+
+        <div
+            class="location-result"
+            id="locationResult"
+            hidden
+        >
+
+            <div>
+                Distance:
+                <strong id="distanceDisplay">
+                    0.00 km
+                </strong>
+            </div>
+
+            <div>
+                Delivery charge:
+                <strong id="deliveryDisplay">
+                    ₹0
+                </strong>
+            </div>
+
+        </div>
+
+
+        <label for="fo">
+            Order notes
+        </label>
+
+        <textarea
+            id="fo"
+            rows="2"
+            placeholder="Less spicy, extra sauce..."
+        ></textarea>
+
+
+        <div
+            class="err"
+            id="err"
+            role="alert"
+        ></div>
+
+
+        <button
+            class="btn pri"
+            type="button"
+            id="send"
+        >
+            Send Order on WhatsApp
+        </button>
+
+
+        <button
+            class="btn sec"
+            type="button"
+            id="back"
+        >
+            ← Back to Cart
+        </button>
+
+    </div>
+
+
+    <!-- CART FOOTER -->
+
+    <div
+        class="df"
+        id="foot"
+    >
+
+        <div class="tr">
+
+            <span>
+                Subtotal
+            </span>
+
+            <span id="st">
+                ₹0
+            </span>
+
+        </div>
+
+
+        <div class="tr">
+
+            <span>
+                Delivery
+            </span>
+
+            <span
+                id="deliveryCharge"
+                class="delivery-highlight"
+            >
+                Location required
+            </span>
+
+        </div>
+
+
+        <div class="tr">
+
+            <span>
+                Distance
+            </span>
+
+            <span id="distanceText">
+                Location required
+            </span>
+
+        </div>
+
+
+        <div class="tr t">
+
+            <span>
+                Total
+            </span>
+
+            <span id="tt">
+                ₹0
+            </span>
+
+        </div>
+
+
+        <div class="note">
+
+            Delivery charge:
+            <strong>₹7 per 1 KM</strong>.
+
+            Distance is calculated automatically
+            after current location is shared.
+
+        </div>
+
+
+        <button
+            class="btn pri"
+            style="width:100%"
+            id="place"
+            disabled
+        >
+            Place Order
+        </button>
+
+    </div>
+
+</aside>
+
+
+<script>
+
+/* =========================================================
+   BUSINESS SETTINGS
+========================================================= */
+
+var PH = "917619198743";
+
+/*
+============================================================
+IMPORTANT
+============================================================
+
+Replace these two values with the EXACT GPS coordinates
+of 04:04 Cloud Kitchen, Moodbidri.
+
+Example:
+
+var KITCHEN_LAT = 13.0754;
+var KITCHEN_LNG = 74.9952;
+
+Do NOT leave the placeholder text below.
+
+============================================================
+*/
+
+var KITCHEN_LAT = 13.064480695664933;
+var KITCHEN_LNG = 74.97746595153058;
+
+
+/* Delivery price */
+
+var DELIVERY_RATE = 7;
+
+
+/* =========================================================
+   APP STATE
+========================================================= */
+
+var items = [];
+var cart = {};
+
+var cat = "All";
+
+var customerLat = null;
+var customerLng = null;
+
+var customerLocationLink = "";
+
+var deliveryKm = 0;
+var chargedKm = 0;
+var deliveryCharge = 0;
+
+
+/* =========================================================
+   HELPER
+========================================================= */
+
+function $(id){
+
+    return document.getElementById(id);
+
+}
+
+
+/* =========================================================
+   MENU
+========================================================= */
+
+var M = [
+
+    {
+        c:"Fries",
+        e:"🍟",
+        d:"Golden, crisp and made to order.",
+        i:[
+            ["Salted Fries",80],
+            ["Peri Peri Fries",110],
+            ["Cheesy Fries",140],
+            ["Loaded Fries",180]
+        ]
+    },
+
+    {
+        c:"Momos",
+        e:"🥟",
+        d:"Steamed, juicy and packed with flavour.",
+        i:[
+            ["Veg Momo",90],
+            ["Veg Peri Momo",100],
+            ["Chicken Momo",110],
+            ["Chicken Peri Momo",120],
+            ["Schezwan Momo",130],
+            ["Dynamite Momo",150]
+        ]
+    },
+
+    {
+        c:"Rice / Noodles",
+        e:"🍜",
+        d:"Wok-tossed and full of flavour.",
+        i:[
+            ["Classic Noodles",130],
+            ["Classic Rice",130],
+            ["Schezwan Noodles",140],
+            ["Schezwan Rice",140],
+            ["Manchurian Noodles",140],
+            ["Manchurian Rice",140],
+            ["Dragon Noodles",150],
+            ["Dragon Rice",150],
+            ["Garlic Noodles",170],
+            ["Garlic Rice",170]
+        ]
+    },
+
+    {
+        c:"Starters",
+        e:"🍗",
+        d:"Crispy, hot and made for sharing.",
+        i:[
+            ["Chicken Nuggets",90],
+            ["Chickpop",150],
+            ["Crispy Chicken Strips",180],
+            ["Crispy Chicken Wings",170]
+        ]
+    },
+
+    {
+        c:"Burgers",
+        e:"🍔",
+        d:"Stacked, saucy and loaded.",
+        i:[
+            ["Veg Cheesy Burger",90],
+            ["Chicken Burger",130],
+            ["Zinger Burger",140],
+            ["Fiery Zinger Burger",180],
+            ["Double Zinger Burger",210],
+            ["No Bun Burger",200]
+        ]
+    },
+
+    {
+        c:"Wraps",
+        e:"🌯",
+        d:"Rolled tight, packed with crunch.",
+        i:[
+            ["Zinger Wrap",150],
+            ["Spicy Zinger Wrap",170],
+            ["Cheesy Zinger Wrap",180],
+            ["Tikka Wrap",170]
+        ]
+    },
+
+    {
+        c:"Braosted",
+        e:"🍖",
+        d:"Braosted chicken, your portion.",
+        i:[
+            ["Single PC",80],
+            ["Half (4 PC)",300],
+            ["Full",580]
+        ]
+    },
+
+    {
+        c:"Mojito",
+        e:"🍹",
+        d:"Cool, fizzy and refreshing.",
+        i:[
+            ["Lime Sparkler",50],
+            ["Watermelon",50],
+            ["Blue Wave",50],
+            ["Passion Fizz",70],
+            ["Purple Zing",60]
+        ]
+    }
+
+];
+
+
+/* =========================================================
+   CREATE ITEM ARRAY
+========================================================= */
+
+M.forEach(function(group){
+
+    group.i.forEach(function(item){
+
+        items.push({
+
+            id:group.c + "|" + item[0],
+
+            n:item[0],
+
+            p:item[1],
+
+            c:group.c,
+
+            e:group.e,
+
+            d:group.d
+
+        });
+
+    });
+
+});
+
+
+/* =========================================================
+   ESCAPE HTML
+========================================================= */
+
+function esc(s){
+
+    return String(s).replace(
+        /[&<>"']/g,
+        function(c){
+
+            return {
+                "&":"&amp;",
+                "<":"&lt;",
+                ">":"&gt;",
+                '"':"&quot;",
+                "'":"&#39;"
+            }[c];
+
+        }
+    );
+
+}
+
+
+/* =========================================================
+   CATEGORY TABS
+========================================================= */
+
+var tabs = $("tabs");
+
+["All"].concat(
+    M.map(function(group){
+        return group.c;
+    })
+).forEach(function(category){
+
+    var button =
+        document.createElement("button");
+
+    button.className =
+        "tab" +
+        (
+            category === "All"
+            ? " on"
+            : ""
+        );
+
+    button.textContent = category;
+
+    button.onclick = function(){
+
+        cat = category;
+
+        Array.prototype.forEach.call(
+            tabs.children,
+            function(tab){
+
+                tab.classList.toggle(
+                    "on",
+                    tab === button
+                );
+
+            }
+        );
+
+        render();
+
+    };
+
+    tabs.appendChild(button);
+
+});
+
+
+/* =========================================================
+   FIND ITEM
+========================================================= */
+
+function find(id){
+
+    return items.find(function(item){
+
+        return item.id === id;
+
+    });
+
+}
+
+
+/* =========================================================
+   CART CONTROL HTML
+========================================================= */
+
+function ctl(item){
+
+    var quantity =
+        cart[item.id] || 0;
+
+
+    if(quantity > 0){
+
+        return `
+            <div class="qty">
+
+                <button
+                    type="button"
+                    data-m="${esc(item.id)}"
+                    aria-label="Remove one"
+                >
+                    −
+                </button>
+
+                <b>
+                    ${quantity}
+                </b>
+
+                <button
+                    type="button"
+                    data-p="${esc(item.id)}"
+                    aria-label="Add one"
+                >
+                    +
+                </button>
+
+            </div>
+        `;
+
+    }
+
+
+    return `
+        <button
+            type="button"
+            class="add"
+            data-p="${esc(item.id)}"
+        >
+            Add to Cart
+        </button>
+    `;
+
+}
+
+
+/* =========================================================
+   RENDER MENU
+========================================================= */
+
+function render(){
+
+    var search =
+        $("q").value
+        .trim()
+        .toLowerCase();
+
+
+    var html = "";
+    var count = 0;
+
+
+    items.forEach(function(item){
+
+        var categoryMatch =
+            cat === "All" ||
+            item.c === cat;
+
+
+        var searchMatch =
+            !search ||
+            (
+                item.n +
+                " " +
+                item.c
+            )
+            .toLowerCase()
+            .indexOf(search) > -1;
+
+
+        if(
+            categoryMatch &&
+            searchMatch
+        ){
+
+            count++;
+
+
+            html += `
+                <article class="card">
+
+                    <div class="cb">
+
+                        <h3>
+                            ${esc(item.n)}
+                        </h3>
+
+                        <p>
+                            ${esc(item.c)}
+                            ·
+                            ${esc(item.d)}
+                        </p>
+
+                        <div class="row">
+
+                            <span class="pr">
+                                ₹${item.p}
+                            </span>
+
+                            <span>
+                                ${ctl(item)}
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </article>
+            `;
+
+        }
+
+    });
+
+
+    $("grid").innerHTML = html;
+
+    $("none").hidden =
+        count > 0;
+
+}
+
+
+/* =========================================================
+   SEARCH
+========================================================= */
+
+$("q").addEventListener(
+    "input",
+    render
+);
+
+
+/* =========================================================
+   CHANGE QUANTITY
+========================================================= */
+
+function chg(id, amount){
+
+    cart[id] =
+        (cart[id] || 0) + amount;
+
+
+    if(cart[id] <= 0){
+
+        delete cart[id];
+
+    }
+
+
+    render();
+    updateCart();
+
+}
+
+
+/* =========================================================
+   CART BUTTONS
+========================================================= */
+
+document.addEventListener(
+    "click",
+    function(event){
+
+        var button =
+            event.target.closest(
+                "[data-p],[data-m]"
+            );
+
+
+        if(!button){
+            return;
+        }
+
+
+        var id =
+            button.dataset.p ||
+            button.dataset.m;
+
+
+        var amount =
+            button.dataset.p
+            ? 1
+            : -1;
+
+
+        chg(id, amount);
+
+    }
+);
+
+
+/* =========================================================
+   SUBTOTAL
+========================================================= */
+
+function sub(){
+
+    return Object.keys(cart)
+        .reduce(
+            function(total, id){
+
+                var item = find(id);
+
+                return total +
+                    (
+                        item.p *
+                        cart[id]
+                    );
+
+            },
+            0
+        );
+
+}
+
+
+/* =========================================================
+   ITEM COUNT
+========================================================= */
+
+function cn(){
+
+    return Object.keys(cart)
+        .reduce(
+            function(total, id){
+
+                return total +
+                    cart[id];
+
+            },
+            0
+        );
+
+}
+
+
+/* =========================================================
+   HAVERSINE DISTANCE
+========================================================= */
+
+function calculateDistance(
+    lat1,
+    lon1,
+    lat2,
+    lon2
+){
+
+    var earthRadius = 6371;
+
+
+    var dLat =
+        (lat2 - lat1) *
+        Math.PI /
+        180;
+
+
+    var dLon =
+        (lon2 - lon1) *
+        Math.PI /
+        180;
+
+
+    var a =
+        Math.sin(dLat / 2) *
+        Math.sin(dLat / 2)
+
+        +
+
+        Math.cos(
+            lat1 * Math.PI / 180
+        )
+
+        *
+
+        Math.cos(
+            lat2 * Math.PI / 180
+        )
+
+        *
+
+        Math.sin(dLon / 2) *
+        Math.sin(dLon / 2);
+
+
+    var c =
+        2 *
+        Math.atan2(
+            Math.sqrt(a),
+            Math.sqrt(1 - a)
+        );
+
+
+    return earthRadius * c;
+
+}
+
+
+/* =========================================================
+   CALCULATE DELIVERY CHARGE
+========================================================= */
+
+function calculateDeliveryCharge(){
+
+    if(
+        customerLat === null ||
+        customerLng === null
+    ){
+
+        deliveryKm = 0;
+        chargedKm = 0;
+        deliveryCharge = 0;
+
+        $("distanceText").textContent =
+            "Location required";
+
+        $("deliveryCharge").textContent =
+            "Location required";
+
+        $("distanceDisplay").textContent =
+            "0.00 km";
+
+        $("deliveryDisplay").textContent =
+            "₹0";
+
+        $("locationResult").hidden =
+            true;
+
+        return;
+
+    }
+
+
+    deliveryKm =
+        calculateDistance(
+            KITCHEN_LAT,
+            KITCHEN_LNG,
+            customerLat,
+            customerLng
+        );
+
+
+    /*
+        CHARGING METHOD
+
+        0.1 km  → 1 km
+        1.1 km  → 2 km
+        2.4 km  → 3 km
+        5.2 km  → 6 km
+
+        Every started kilometre = ₹7
+    */
+
+    chargedKm =
+        Math.max(
+            1,
+            Math.ceil(deliveryKm)
+        );
+
+
+    deliveryCharge =
+        chargedKm *
+        DELIVERY_RATE;
+
+
+    $("distanceText").textContent =
+        deliveryKm.toFixed(2) +
+        " km";
+
+
+    $("deliveryCharge").textContent =
+        "₹" +
+        deliveryCharge;
+
+
+    $("distanceDisplay").textContent =
+        deliveryKm.toFixed(2) +
+        " km";
+
+
+    $("deliveryDisplay").textContent =
+        "₹" +
+        deliveryCharge;
+
+
+    $("locationResult").hidden =
+        false;
+
+}
+
+
+/* =========================================================
+   UPDATE CART
+========================================================= */
+
+function updateCart(){
+
+    var count = cn();
+    var subtotal = sub();
+
+
+    $("cnt").textContent =
+        count;
+
+
+    $("barN").textContent =
+        count +
+        (
+            count === 1
+            ? " item"
+            : " items"
+        );
+
+
+    var total =
+        subtotal +
+        deliveryCharge;
+
+
+    if(
+        count > 0 &&
+        deliveryCharge > 0
+    ){
+
+        $("barT").textContent =
+            "₹" +
+            total;
+
+    }else{
+
+        $("barT").textContent =
+            "₹" +
+            subtotal;
+
+    }
+
+
+    $("bar").classList.toggle(
+        "on",
+        count > 0
+    );
+
+
+    $("st").textContent =
+        "₹" +
+        subtotal;
+
+
+    if(deliveryCharge > 0){
+
+        $("tt").textContent =
+            "₹" +
+            total;
+
+    }else{
+
+        $("tt").textContent =
+            "₹" +
+            subtotal +
+            " + delivery";
+
+    }
+
+
+    var html = "";
+
+
+    Object.keys(cart).forEach(function(id){
+
+        var item =
+            find(id);
+
+        html += `
+            <div class="ci">
+
+                <div class="ci-main">
+
+                    ${esc(item.n)}
+
+                    <small>
+                        ₹${item.p} each
+                    </small>
+
+                </div>
+
+
+                <div class="qty">
+
+                    <button
+                        type="button"
+                        data-m="${esc(id)}"
+                        aria-label="Remove one"
+                    >
+                        −
+                    </button>
+
+                    <b>
+                        ${cart[id]}
+                    </b>
+
+                    <button
+                        type="button"
+                        data-p="${esc(id)}"
+                        aria-label="Add one"
+                    >
+                        +
+                    </button>
+
+                </div>
+
+
+                <b>
+                    ₹${item.p * cart[id]}
+                </b>
+
+            </div>
+        `;
+
+    });
+
+
+    $("items").innerHTML =
+        html ||
+        `
+            <p class="empty">
+                Your cart is empty.<br>
+                Add something delicious.
+            </p>
+        `;
+
+
+    $("place").disabled =
+        count === 0;
+
+
+    $("place").style.opacity =
+        count ? "1" : ".5";
+
+}
+
+
+/* =========================================================
+   OPEN CART
+========================================================= */
+
+function openCart(){
+
+    $("dr").classList.add("on");
+
+    $("ov").classList.add("on");
+
+    $("dr").setAttribute(
+        "aria-hidden",
+        "false"
+    );
+
+    document.body.classList.add(
+        "no-scroll"
+    );
+
+    showView(0);
+
+}
+
+
+/* =========================================================
+   CLOSE CART
+========================================================= */
+
+function closeCart(){
+
+    $("dr").classList.remove("on");
+
+    $("ov").classList.remove("on");
+
+    $("dr").setAttribute(
+        "aria-hidden",
+        "true"
+    );
+
+    document.body.classList.remove(
+        "no-scroll"
+    );
+
+}
+
+
+/* =========================================================
+   CART / FORM VIEW
+========================================================= */
+
+function showView(form){
+
+    $("cartV").hidden =
+        !!form;
+
+    $("formV").hidden =
+        !form;
+
+    $("foot").hidden =
+        !!form;
+
+
+    $("dt").textContent =
+        form
+        ? "Delivery Details"
+        : "Your Cart";
+
+}
+
+
+/* =========================================================
+   CART OPEN/CLOSE EVENTS
+========================================================= */
+
+$("cartOpen").onclick =
+    openCart;
+
+$("bar").onclick =
+    openCart;
+
+$("cx").onclick =
+    closeCart;
+
+$("ov").onclick =
+    closeCart;
+
+
+$("back").onclick =
+    function(){
+
+        showView(0);
+
+    };
+
+
+document.addEventListener(
+    "keydown",
+    function(event){
+
+        if(event.key === "Escape"){
+
+            closeCart();
+
+        }
+
+    }
+);
+
+
+/* =========================================================
+   PLACE ORDER BUTTON
+========================================================= */
+
+$("place").onclick =
+    function(){
+
+        if(cn() === 0){
+
+            return;
+
+        }
+
+
+        showView(1);
+
+    };
+
+
+/* =========================================================
+   CURRENT LOCATION
+========================================================= */
+
+$("loc").onclick =
+    function(){
+
+        var status =
+            $("locN");
+
+
+        /*
+            Make sure kitchen coordinates
+            have been entered.
+        */
+
+        if(
+            typeof KITCHEN_LAT !== "number" ||
+            typeof KITCHEN_LNG !== "number"
+        ){
+
+            status.innerHTML =
+                "Please set the kitchen GPS coordinates in the code first.";
+
+            return;
+
+        }
+
+
+        if(
+            !navigator.geolocation
+        ){
+
+            status.textContent =
+                "Location is not supported on this device.";
+
+            return;
+
+        }
+
+
+        status.textContent =
+            "Getting your current location...";
+
+
+        $("loc").disabled =
+            true;
+
+
+        navigator.geolocation.getCurrentPosition(
+
+            function(position){
+
+                customerLat =
+                    position.coords.latitude;
+
+                customerLng =
+                    position.coords.longitude;
+
+
+                customerLocationLink =
+                    "https://maps.google.com/?q=" +
+                    customerLat +
+                    "," +
+                    customerLng;
+
+
+                calculateDeliveryCharge();
+
+
+                status.innerHTML =
+                    "✓ Location added successfully.";
+
+
+                $("loc").disabled =
+                    false;
+
+
+                updateCart();
+
+            },
+
+
+            function(error){
+
+                $("loc").disabled =
+                    false;
+
+
+                var message =
+                    "Couldn't get your location.";
+
+
+                if(error.code === 1){
+
+                    message =
+                        "Location permission denied. Please allow location access.";
+
+                }
+
+                else if(error.code === 2){
+
+                    message =
+                        "Your location could not be determined.";
+
+                }
+
+                else if(error.code === 3){
+
+                    message =
+                        "Location request timed out.";
+
+                }
+
+
+                status.textContent =
+                    message;
+
+            },
+
+
+            {
+                enableHighAccuracy:true,
+                timeout:15000,
+                maximumAge:0
+            }
+
+        );
+
+    };
+
+
+/* =========================================================
+   SEND WHATSAPP ORDER
+========================================================= */
+
+$("send").onclick =
+    function(){
+
+        var name =
+            $("fn").value.trim();
+
+
+        var phone =
+            $("fp").value.trim();
+
+
+        var address =
+            $("fa").value.trim();
+
+
+        var flat =
+            $("ff").value.trim();
+
+
+        var landmark =
+            $("fl").value.trim();
+
+
+        var notes =
+            $("fo").value.trim();
+
+
+        var error =
+            $("err");
+
+
+        /* Basic validation */
+
+        if(
+            !name ||
+            !address ||
+            phone.replace(/\D/g,"").length < 10
+        ){
+
+            error.textContent =
+                "Please enter your name, valid phone number and delivery address.";
+
+            return;
+
+        }
+
+
+        /* GPS validation */
+
+        if(
+            customerLat === null ||
+            customerLng === null
+        ){
+
+            error.textContent =
+                "Please use your current location so the delivery charge can be calculated automatically.";
+
+            return;
+
+        }
+
+
+        error.textContent =
+            "";
+
+
+        var subtotal =
+            sub();
+
+
+        var total =
+            subtotal +
+            deliveryCharge;
+
+
+        var message =
+            "*NEW ORDER – 04:04 CLOUD KITCHEN*"
+            +
+
+            "\n\n"
+
+            +
+
+            "*Name:* " +
+            name
+
+            +
+
+            "\n*Phone:* " +
+            phone
+
+            +
+
+            "\n*Address:* " +
+            (
+                flat
+                ?
+                "Flat/Door " +
+                flat +
+                ", "
+                :
+                ""
+            )
+            +
+            address
+
+            +
+
+            "\n*Landmark:* " +
+            (
+                landmark ||
+                "-"
+            )
+
+            +
+
+            "\n*Customer Distance:* " +
+            deliveryKm.toFixed(2) +
+            " km"
+
+            +
+
+            "\n*Charged Distance:* " +
+            chargedKm +
+            " km"
+
+            +
+
+            "\n*Location:* " +
+            customerLocationLink
+
+            +
+
+            "\n\n*ITEMS:*\n";
+
+
+        /* Add items */
+
+        Object.keys(cart).forEach(
+            function(id){
+
+                var item =
+                    find(id);
+
+                var itemTotal =
+                    item.p *
+                    cart[id];
+
+
+                message +=
+                    "• " +
+                    item.n +
+                    " x" +
+                    cart[id] +
+                    " = ₹" +
+                    itemTotal +
+                    "\n";
+
+            }
+        );
+
+
+        /* Final calculation */
+
+        message +=
+            "\n*Subtotal:* ₹" +
+            subtotal
+
+            +
+
+            "\n*Delivery:* ₹" +
+            deliveryCharge +
+            " (" +
+            chargedKm +
+            " km × ₹7)"
+
+            +
+
+            "\n*TOTAL:* ₹" +
+            total;
+
+
+        if(notes){
+
+            message +=
+                "\n\n*Notes:* " +
+                notes;
+
+        }
+
+
+        var whatsappURL =
+            "https://wa.me/" +
+            PH +
+            "?text=" +
+            encodeURIComponent(message);
+
+
+        window.open(
+            whatsappURL,
+            "_blank"
+        );
+
+    };
+
+
+/* =========================================================
+   INITIAL STATE
+========================================================= */
+
+render();
+
+calculateDeliveryCharge();
+
+updateCart();
+
+
+/* =========================================================
+   LOADER
+========================================================= */
+
+window.addEventListener(
+    "load",
+    function(){
+
+        setTimeout(
+            function(){
+
+                $("ld").classList.add(
+                    "h"
+                );
+
+            },
+            500
+        );
+
+    }
+);
+
+
+setTimeout(
+    function(){
+
+        $("ld").classList.add(
+            "h"
+        );
+
+    },
+    2500
+);
+
+</script>
+
+</body>
+</html>
